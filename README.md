@@ -34,7 +34,7 @@ MentorConnect is a web-based platform that helps university students find and co
 
 ## 📁 Project Structure
 
-
+```
 MentorConnect/
 ├── public/                        # Static assets
 │   └── index.html                 # HTML template
@@ -54,7 +54,7 @@ MentorConnect/
 ├── tailwind.config.ts            # Tailwind CSS theme and settings
 ├── tsconfig.*.json                # TypeScript config
 └── vite.config.ts                 # Vite dev/build config
-
+```
 
 ---
 
