@@ -1,138 +1,140 @@
 # 🧑🏻‍🏫 MentorConnect
 
-*Empowering students and mentors to connect, collaborate, and grow together.*  
-MentorConnect is a web-based platform that helps university students find and connect with mentors for academic guidance. The platform offers appointment scheduling, real-time notifications, and profile management for both mentors and students.
+> Empowering students and mentors to connect, collaborate, and grow together.
 
----
+**MentorConnect** is a modern web-based platform designed to bridge the gap between university students and academic mentors. With features like appointment scheduling, real-time notifications, and seamless profile management, it simplifies mentorship for both students and mentors.
+
+
 
 ## 🚀 Features
 
-### 🎓 For Students
-- Browse mentors by course or name
-- Send appointment requests with custom notes
-- Receive real-time SMS notifications on appointment status
-- View history of past sessions
+### 🎓 Student Experience
+- 🔍 Browse and filter mentors by course or name  
+- 📨 Send appointment requests with personalized notes  
+- 🔔 Receive real-time SMS notifications on request status  
+- 📅 View session history for easy follow-up  
 
-### 🧑‍🏫 For Mentors
-- Set hourly rates and available time slots
-- Accept or reject student requests with reasoning
-- View past sessions and track interactions
+### 🧑‍🏫 Mentor Experience
+- 💼 Define hourly rates and set available time slots  
+- ✅ Accept or ❌ reject appointment requests with a reason  
+- 📊 Track interaction history for better mentoring continuity  
 
----
+
 
 ## 🛠 Tech Stack
 
-| Layer       | Technology             |
-|-------------|------------------------|
-| *Frontend*| React, TypeScript, Tailwind CSS |
-| *Backend* | Supabase (PostgreSQL + Auth)     |
-| *Notifications* | Supabase Edge Functions / Webhooks |
-| *Build Tools* | Vite, Bun (alternative to npm) |
-| *Deployment* | Vercel or Netlify (optional)  |
+| Layer            | Technologies                               |
+|------------------|--------------------------------------------|
+| **Frontend**     | React, TypeScript, Tailwind CSS            |
+| **Backend**      | Supabase (PostgreSQL + Auth)               |
+| **Notifications**| Supabase Edge Functions, Webhooks          |
+| **Build Tools**  | Vite, Bun (alternative to npm)             |
+| **Deployment**   | Vercel / Netlify *(configurable)*          |
 
----
 
 ## 📁 Project Structure
 
 ```
 MentorConnect/
-├── public/                        # Static assets
-│   └── index.html                 # HTML template
+├── public/                    # Static files and index.html
 ├── src/
-│   ├── components/                # UI components (Navbar, Footer, etc.)
-│   ├── pages/                     # Main views (Home, Login, Register)
-│   ├── services/                  # API and utility logic
-│   ├── supabase/                  # Supabase client setup
-│   ├── App.tsx                    # Root app component
-│   └── index.tsx                  # React DOM entry point
-├── .gitignore                     # Git ignore file
-├── README.md                      # Project documentation
-├── bun.lockb                      # Bun package manager lock
-├── eslint.config.js               # Linting rules
-├── package.json                   # Project metadata
-├── postcss.config.js              # PostCSS config
-├── tailwind.config.ts             # Tailwind CSS theme and settings
-├── tsconfig.*.json                # TypeScript config
-└── vite.config.ts                 # Vite dev/build config
+│   ├── components/            # Reusable UI elements
+│   ├── pages/                 # Main route components
+│   ├── services/              # API and helper utilities
+│   ├── supabase/              # Supabase client configuration
+│   ├── App.tsx                # Root application component
+│   └── index.tsx              # React entry point
+├── .gitignore                 # Ignored files for Git
+├── README.md                  # Project documentation
+├── bun.lockb                  # Bun lock file
+├── eslint.config.js           # Linting configuration
+├── package.json               # Project metadata and scripts
+├── postcss.config.js          # PostCSS plugins
+├── tailwind.config.ts         # Tailwind theme and setup
+├── tsconfig.*.json            # TypeScript configurations
+└── vite.config.ts             # Vite bundler configuration
 ```
 
----
 
-## ⚙ Setup Instructions
+## ⚙️ Setup Instructions
 
 ### 🔧 Prerequisites
+- ✅ [Bun](https://bun.sh) installed  
+  *(Install via terminal: `curl https://bun.sh/install | bash`)*
+- ✅ A Supabase project with Auth + Database setup
+- ✅ (Optional) Twilio account for SMS notifications
 
-- *[Bun](https://bun.sh)* installed (curl https://bun.sh/install | bash)
-- A *Supabase* project (Auth + Database)
-- Optional: Twilio account for SMS notifications
+---
 
 ### 🔨 Installation
 
-1. *Clone the Repository*
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/pruthvi2602/MentorConnect.git
+   cd MentorConnect
+   ```
 
-bash
-git clone https://github.com/pruthvi2602/MentorConnect.git
-cd MentorConnect
+2. **Install Dependencies**
+   ```bash
+   bun install
+   ```
 
+3. **Environment Setup**
 
-2. *Install Dependencies*
+   Create a `.env` file in the root directory with:
 
-bash
-bun install
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_anon_key
+   ```
 
+4. **Run the App**
+   ```bash
+   bun dev
+   ```
 
-3. *Environment Configuration*
+   Visit: [http://localhost:5173](http://localhost:5173)
 
-Create a .env file in the root with the following:
-
-env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_anon_key
-
-
-4. *Run the Development Server*
-
-bash
-bun dev
-
-
-Visit http://localhost:5173 to view the app.
-
----
 
 ## 🧠 Challenges Faced
 
-- Migrating from traditional backend to Supabase serverless architecture
-- Learning and integrating Bun package manager
-- Styling and responsiveness with Tailwind CSS
-- Implementing secure real-time updates
+- ⚙ Transitioning from traditional backend to Supabase (serverless-first)
+- 🔄 Adapting to the new Bun ecosystem for package management
+- 💅 Achieving pixel-perfect responsiveness with Tailwind CSS
+- 🔐 Ensuring secure and real-time updates via webhooks and edge functions
 
----
 
-## 📈 Future Enhancements
 
-- 📊 Mentor rating and feedback system  
-- 📹 In-app video calling with scheduling  
-- 💳 Credit-based session system  
-- 🧪 Skill-based quizzes and onboarding tests  
-- 🔔 Push notifications and calendar integration  
+## 📈 Future Roadmap
 
----
+- ⭐ **Mentor rating and review system**  
+- 🎥 **Built-in video call feature with scheduling**  
+- 💰 **Credit/token-based session system**  
+- 🧠 **Skill quizzes and onboarding tests**  
+- 📆 **Push notifications and calendar integrations**
+
+
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+We welcome all contributors! To get started:
 
-1. Fork the repo
-2. Create a new branch: git checkout -b feature-name
-3. Make your changes
-4. Commit: git commit -m "Add feature"
-5. Push: git push origin feature-name
-6. Submit a Pull Request
+1. **Fork** this repo  
+2. Create a **feature branch**  
+   ```bash
+   git checkout -b feature-name
+   ```
+3. **Make your changes**  
+4. **Commit and push**
+   ```bash
+   git commit -m "Add feature"
+   git push origin feature-name
+   ```
+5. **Submit a Pull Request** 🚀
 
----
 
-## 📞 Contact
 
-- 📧 Email: pruthvubhudhecha02@gmail.com
+## 📬 Contact
+
+- 📧 Email: [pruthvubhudhecha02@gmail.com](mailto:pruthvubhudhecha02@gmail.com)  
 - 🐙 GitHub: [@pruthvi2602](https://github.com/pruthvi2602)
