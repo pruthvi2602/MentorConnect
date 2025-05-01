@@ -51,7 +51,7 @@ MentorConnect/
 ├── eslint.config.js               # Linting rules
 ├── package.json                   # Project metadata
 ├── postcss.config.js              # PostCSS config
-├── tailwind.config.ts            # Tailwind CSS theme and settings
+├── tailwind.config.ts             # Tailwind CSS theme and settings
 ├── tsconfig.*.json                # TypeScript config
 └── vite.config.ts                 # Vite dev/build config
 ```
