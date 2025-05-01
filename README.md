@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
+# 🧑🏻‍🏫 MentorConnect
 
-## Project info
+*Empowering students and mentors to connect, collaborate, and grow together.*  
+MentorConnect is a web-based platform that helps university students find and connect with mentors for academic guidance. The platform offers appointment scheduling, real-time notifications, and profile management for both mentors and students.
 
-**URL**: https://lovable.dev/projects/5d21c4ff-dcba-42ce-ba1c-ec506d09f634
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+### 🎓 For Students
+- Browse mentors by course or name
+- Send appointment requests with custom notes
+- Receive real-time SMS notifications on appointment status
+- View history of past sessions
 
-**Use Lovable**
+### 🧑‍🏫 For Mentors
+- Set hourly rates and available time slots
+- Accept or reject student requests with reasoning
+- View past sessions and track interactions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5d21c4ff-dcba-42ce-ba1c-ec506d09f634) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Tech Stack
 
-**Use your preferred IDE**
+| Layer       | Technology             |
+|-------------|------------------------|
+| *Frontend*| React, TypeScript, Tailwind CSS |
+| *Backend* | Supabase (PostgreSQL + Auth)     |
+| *Notifications* | Supabase Edge Functions / Webhooks |
+| *Build Tools* | Vite, Bun (alternative to npm) |
+| *Deployment* | Vercel or Netlify (optional)  |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Structure
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+MentorConnect/
+├── public/                        # Static assets
+│   └── index.html                 # HTML template
+├── src/
+│   ├── components/                # UI components (Navbar, Footer, etc.)
+│   ├── pages/                     # Main views (Home, Login, Register)
+│   ├── services/                  # API and utility logic
+│   ├── supabase/                  # Supabase client setup
+│   ├── App.tsx                    # Root app component
+│   └── index.tsx                  # React DOM entry point
+├── .gitignore                     # Git ignore file
+├── README.md                      # Project documentation
+├── bun.lockb                      # Bun package manager lock
+├── eslint.config.js               # Linting rules
+├── package.json                   # Project metadata
+├── postcss.config.js              # PostCSS config
+├── tailwind.config.ts            # Tailwind CSS theme and settings
+├── tsconfig.*.json                # TypeScript config
+└── vite.config.ts                 # Vite dev/build config
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## ⚙ Setup Instructions
 
-**Edit a file directly in GitHub**
+### 🔧 Prerequisites
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- *[Bun](https://bun.sh)* installed (curl https://bun.sh/install | bash)
+- A *Supabase* project (Auth + Database)
+- Optional: Twilio account for SMS notifications
 
-**Use GitHub Codespaces**
+### 🔨 Installation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. *Clone the Repository*
 
-## What technologies are used for this project?
+bash
+git clone https://github.com/pruthvi2602/MentorConnect.git
+cd MentorConnect
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. *Install Dependencies*
 
-## How can I deploy this project?
+bash
+bun install
 
-Simply open [Lovable](https://lovable.dev/projects/5d21c4ff-dcba-42ce-ba1c-ec506d09f634) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+3. *Environment Configuration*
 
-Yes, you can!
+Create a .env file in the root with the following:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_anon_key
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+4. *Run the Development Server*
+
+bash
+bun dev
+
+
+Visit http://localhost:5173 to view the app.
+
+---
+
+## 🧠 Challenges Faced
+
+- Migrating from traditional backend to Supabase serverless architecture
+- Learning and integrating Bun package manager
+- Styling and responsiveness with Tailwind CSS
+- Implementing secure real-time updates
+
+---
+
+## 📈 Future Enhancements
+
+- 📊 Mentor rating and feedback system  
+- 📹 In-app video calling with scheduling  
+- 💳 Credit-based session system  
+- 🧪 Skill-based quizzes and onboarding tests  
+- 🔔 Push notifications and calendar integration  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repo
+2. Create a new branch: git checkout -b feature-name
+3. Make your changes
+4. Commit: git commit -m "Add feature"
+5. Push: git push origin feature-name
+6. Submit a Pull Request
+
+---
+
+## 📞 Contact
+
+- 📧 Email: pruthvubhudhecha02@gmail.com
+- 🐙 GitHub: [@pruthvi2602](https://github.com/pruthvi2602)
