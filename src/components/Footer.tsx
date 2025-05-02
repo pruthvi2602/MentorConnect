@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">Email: info@mentorconnect.com</li>
-              <li className="text-gray-300">Phone: +1 (123) 456-7890</li>
-              <li className="text-gray-300">Address: 123 Mentorship Way</li>
+              <li className="text-gray-300">Email: pruthvibuhecha02@gmail.com</li>
+              <li className="text-gray-300">Phone: +91 9909400958</li>
+              <li className="text-gray-300">Address: College Road, Nadiad, Gujarat</li>
             </ul>
           </div>
         </div>
